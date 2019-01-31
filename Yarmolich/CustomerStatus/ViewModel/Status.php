@@ -44,12 +44,15 @@ class Status implements \Magento\Framework\View\Element\Block\ArgumentInterface
     public function getStatusHtml()
     {
         $status = '';
-        $customer = $this->customerRepository->getById(
-            $this->customerSession->getCustomerId()
-        );
+        if(null === !$this->customerSession->getCustomerId()) {
+            $customer = $this->customerRepository->getById(
+                $this->customerSession->getCustomerId()
+            );
 
-        if ($customer->getCustomAttribute('customer_status') != '') {
-            return $customer->getCustomAttribute('customer_status')->getValue();
+            if ($customer->getCustomAttribute('customer_status') != '') {
+                return $customer->getCustomAttribute('customer_status')
+                    ->getValue();
+            }
         }
 
         return $status;
