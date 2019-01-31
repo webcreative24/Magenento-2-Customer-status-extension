@@ -1,0 +1,22 @@
+{
+  "name": "yarmolich/module-customerstatus",
+  "description": "",
+  "type": "magento2-module",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Sergey Yarmolich",
+      "email": "imdeveloper@yandex.ru"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Yarmolich\\CustomerStatus\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  }
+}

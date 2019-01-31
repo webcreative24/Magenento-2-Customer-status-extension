@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="header.links">
+            <block class="Magento\Framework\View\Element\Template" name="header.additional"
+                   template="Yarmolich_CustomerStatus::form/welcome.phtml" before="customer">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Yarmolich\CustomerStatus\ViewModel\Status</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

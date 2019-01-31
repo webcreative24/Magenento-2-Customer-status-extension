@@ -1,0 +1,14 @@
+<?php
+/** @var Yarmolich\CustomerStatus\ViewModel\Status $viewModel */
+$viewModel = $block->getViewModel();
+?>
+
+<div class="customer-status"><?php echo $viewModel->getStatusHtml(); ?></div>
+
+<style>
+    .customer-status {
+        display: inline-block;
+        margin: 0 0 0 15px;
+        font-size: 14px;
+    }
+</style>
