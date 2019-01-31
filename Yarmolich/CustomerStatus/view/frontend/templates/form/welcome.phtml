@@ -3,12 +3,14 @@
 $viewModel = $block->getViewModel();
 ?>
 
-<div class="customer-status"><?php echo $viewModel->getStatusHtml(); ?></div>
+<?php if($viewModel->getStatusHtml() != ''): ?>
+    <div class="customer-status"><?php echo $viewModel->getStatusHtml(); ?></div>
 
-<style>
-    .customer-status {
-        display: inline-block;
-        margin: 0 0 0 15px;
-        font-size: 14px;
-    }
-</style>
+    <style>
+        .customer-status {
+            display: inline-block;
+            margin: 0 0 0 15px;
+            font-size: 14px;
+        }
+    </style>
+<?php endif; ?>
